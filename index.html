@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library Management System</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
+
   <header>
     <h1>Library Management System</h1>
   </header>
+
   <main>
+
     <form id="book-form">
+
       <input type="text" id="title" placeholder="Title" required>
       <input type="text" id="author" placeholder="Author" required>
       <input type="number" id="pages" placeholder="Pages" required>
+
       <label>
         <input type="checkbox" id="isRead"> Read
       </label>
+
       <button type="submit">Add Book</button>
+
     </form>
+
+    <input type="text" id="search" placeholder="Search by title or author">
+    <select id="filter">
+      <option value="all">All</option>
+      <option value="read">Read</option>
+      <option value="unread">Unread</option>
+    </select>
+
     <div id="book-list"></div>
+    
   </main>
+
   <script src="js/book.js"></script>
   <script src="js/app.js"></script>
+
 </body>
 </html>
