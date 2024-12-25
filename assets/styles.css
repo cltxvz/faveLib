@@ -1,33 +1,241 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #4CAF50;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Section */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Controls Section */
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+#controls input[type="text"],
+#controls select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#controls input[type="text"] {
+  flex: 2;
+  min-width: 200px;
+}
+
+#controls select {
+  flex: 1;
+  min-width: 120px;
+}
+
+/* Actions Section */
+#actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#actions button,
+#actions input[type="file"] {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#add-book-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#export {
+  background-color: #008CBA;
+  color: white;
+}
+
+#actions input[type="file"] {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#actions button:hover,
+#actions input[type="file"]:hover {
+  opacity: 0.9;
+}
+
+/* Book List */
+#book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.book {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.book:hover {
+  transform: translateY(-5px);
+}
+
+.book h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.book p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.book button {
+  margin-top: 10px;
+  padding: 6px 10px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.book button:first-of-type {
+  background-color: #ff9800;
+  color: white;
+}
+
+.book button:last-of-type {
+  background-color: #f44336;
+  color: white;
+}
+
+.book button:hover {
+  opacity: 0.8;
+}
+
+/* Modals Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="number"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.modal-content button:hover {
+  opacity: 0.9;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #controls,
+  #actions {
+    flex-direction: column;
   }
-  
-  header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  form {
-    margin: 20px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  
+
   #book-list {
-    margin: 20px;
-    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
   }
-  
-  .book {
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
