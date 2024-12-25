@@ -151,13 +151,30 @@ bookForm.addEventListener('submit', (e) => {
   saveLibrary();
   displayBooks();
   bookForm.reset();
+
   modal.style.display = 'none';
 });
 
-// 📥 Event Listeners
-searchInput.addEventListener('input', displayBooks);
-filterSelect.addEventListener('change', displayBooks);
-sortSelect.addEventListener('change', displayBooks);
+// 📦 Modal Logic - Add New Book
+addBookBtn.addEventListener('click', () => {
+  bookForm.reset();
+  delete bookForm.dataset.editingId;
+  document.querySelector('.modal-content h2').innerText = 'Add a New Book';
+  document.querySelector('#book-form button').innerText = 'Add Book';
+  modal.style.display = 'block';
+});
+
+// ❌ Modal Logic - Close Modal
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Close Modal on Outside Click
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
 
 // ⚠️ Clear Entire Library
 clearLibraryBtn.addEventListener('click', () => {
