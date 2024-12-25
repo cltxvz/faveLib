@@ -4,6 +4,8 @@ const bookList = document.getElementById('book-list');
 let library = [];
 const searchInput = document.getElementById('search');
 const filterSelect = document.getElementById('filter');
+const modal = document.getElementById('modal');
+const closeModal = document.getElementById('close-modal');
 
 // Add a new book
 bookForm.addEventListener('submit', (e) => {
@@ -86,6 +88,22 @@ function loadLibrary() {
 searchInput.addEventListener('input', displayBooks);
 filterSelect.addEventListener('change', displayBooks);
 
+// Add modal logic
+document.getElementById('add-book-btn').addEventListener('click', () => {
+  modal.style.display = 'block';
+});
+
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Confirm delete
+function deleteBook(id) {
+  if (confirm('Are you sure you want to delete this book?')) {
+    library = library.filter((b) => b.id !== id);
+    displayBooks();
+  }
+}
 
 
 // Call loadLibrary on initialization
