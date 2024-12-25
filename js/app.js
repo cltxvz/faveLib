@@ -105,6 +105,37 @@ function deleteBook(id) {
   }
 }
 
+// Export Library Function
+document.getElementById('export').addEventListener('click', () => {
+  if (library.length === 0) {
+    alert('Library is empty. Nothing to export!');
+    return;
+  }
+  
+  const dataStr = JSON.stringify(library, null, 2); // Beautify JSON output
+  const blob = new Blob([dataStr], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'library.json';
+  document.body.appendChild(a); // Required for Firefox
+  a.click();
+  document.body.removeChild(a); // Cleanup
+  URL.revokeObjectURL(url); // Free up resources
+});
+
+// Import Library Function
+document.getElementById('import').addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    library = JSON.parse(e.target.result);
+    displayBooks();
+  };
+  reader.readAsText(file);
+});
+
 
 // Call loadLibrary on initialization
 loadLibrary();
