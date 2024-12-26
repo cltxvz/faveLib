@@ -5,11 +5,13 @@
 
 faveLib is an interactive web-based library management system that allows users to manage their personal book collection efficiently. Whether you're an avid reader, a book collector, or someone who wants to keep track of their reading habits, faveLib offers an intuitive interface to add, edit, categorize, rate, search, and export/import your books with ease.
 
+
 🛠️ Technologies Used:
 
 Frontend: HTML, CSS, JavaScript.
 Core Libraries/Tools: LocalStorage API, FileReader API, Blob API.
 Version Control: Git & GitHub.
+
 
 📚 Skills & Concepts Applied:
 
@@ -19,6 +21,7 @@ Algorithms: Search, Sort.
 State Management: Dynamic UI updates via JavaScript DOM manipulation, State preservation with LocalStorage API.
 Error Handling: JSON validation during library import, User feedback for invalid inputs.
 Responsive Design: Adaptive UI using CSS Grid and Flexbox, Mobile-friendly modal and form layouts.
+
 
 📖 Instructions on How to Use faveLib:
 
@@ -49,6 +52,7 @@ Import/Export Library:
 Clear Library:
 - Click "Empty Library" to reset the library.
 
+
 📊 Features:
 
 Add/Edit/Delete Books.
@@ -58,6 +62,7 @@ LocalStorage Persistence.
 Import/Export JSON.
 Responsive Design.
 Book Count Display.
+
 
 📈 Ideas for Future Improvements:
 
@@ -73,11 +78,13 @@ Cloud storage for cross-device synchronization.
 - Navigate to the project folder.
 - Start managing your personal library!
 
+
 👤 Author
 
 Carlos A. Cárdenas
 
 Feel free to reach out for collaboration or feedback!
+
 
 📄 License
 
