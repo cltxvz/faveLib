@@ -17,6 +17,7 @@ header {
   font-size: 24px;
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px; /* Added space */
 }
 
 /* 📊 Controls & Actions */
@@ -222,6 +223,7 @@ header {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
+  box-sizing: border-box; /* Ensures padding and border don't affect width */
 }
 
 .form-group {
@@ -319,4 +321,26 @@ footer a:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+#book-count {
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 📋 Custom Category Input */
+#custom-category-group {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#custom-category {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box; /* Ensures padding and border don't affect width */
 }
