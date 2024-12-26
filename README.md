@@ -86,9 +86,4 @@ Carlos A. Cárdenas
 Feel free to reach out for collaboration or feedback!
 
 
-📄 License
-
-This project is licensed under the MIT License.
-
-
 Thank you for checking out faveLib! 📖✨ If you like this project, feel free to ⭐ star the repository and contribute to its growth. 🚀
