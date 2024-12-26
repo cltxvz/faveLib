@@ -8,19 +8,19 @@ faveLib is an interactive web-based library management system that allows users 
 
 🛠️ Technologies Used:
 
-Frontend: HTML, CSS, JavaScript.
-Core Libraries/Tools: LocalStorage API, FileReader API, Blob API.
-Version Control: Git & GitHub.
+- Frontend: HTML, CSS, JavaScript.
+- Core Libraries/Tools: LocalStorage API, FileReader API, Blob API.
+- Version Control: Git & GitHub.
 
 
 📚 Skills & Concepts Applied:
 
-Object-Oriented Programming (OOP): Classes, Objects, Encapsulation.
-Data Structures: Arrays.
-Algorithms: Search, Sort.
-State Management: Dynamic UI updates via JavaScript DOM manipulation, State preservation with LocalStorage API.
-Error Handling: JSON validation during library import, User feedback for invalid inputs.
-Responsive Design: Adaptive UI using CSS Grid and Flexbox, Mobile-friendly modal and form layouts.
+- Object-Oriented Programming (OOP): Classes, Objects, Encapsulation.
+- Data Structures: Arrays.
+- Algorithms: Search, Sort.
+- State Management: Dynamic UI updates via JavaScript DOM manipulation, State preservation with LocalStorage API.
+- Error Handling: JSON validation during library import, User feedback for invalid inputs.
+- Responsive Design: Adaptive UI using CSS Grid and Flexbox, Mobile-friendly modal and form layouts.
 
 
 📖 Instructions on How to Use faveLib:
@@ -55,21 +55,21 @@ Clear Library:
 
 📊 Features:
 
-Add/Edit/Delete Books.
-Dynamic Filtering and Sorting.
-Custom Categories.
-LocalStorage Persistence.
-Import/Export JSON.
-Responsive Design.
-Book Count Display.
+- Add/Edit/Delete Books.
+- Dynamic Filtering and Sorting.
+- Custom Categories.
+- LocalStorage Persistence.
+- Import/Export JSON.
+- Responsive Design.
+- Book Count Display.
 
 
 📈 Ideas for Future Improvements:
 
-User authentication for personalized libraries.
-Integration with external book APIs (e.g., Google Books API).
-Enhanced analytics on reading habits.
-Cloud storage for cross-device synchronization.
+- User authentication for personalized libraries.
+- Integration with external book APIs (e.g., Google Books API).
+- Enhanced analytics on reading habits.
+- Cloud storage for cross-device synchronization.
 
 
 📜 How to Run the Project Locally:
