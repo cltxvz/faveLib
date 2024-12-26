@@ -3,34 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Library Management System</title>
+  <title>faveLib</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
-  <!-- 📌 Header -->
+  <!-- Header Section -->
   <header>
-    <h1>Library Management System</h1>
+    <h1>faveLib</h1>
+    <p class="tagline">Your personal library to manage, track, and enjoy your favorite books!</p>
   </header>
 
-  <!-- 📊 Controls Section -->
+  <!-- Controls Section -->
   <section id="controls">
+    <!-- Search Input -->
     <input type="text" id="search" placeholder="Search by title or author">
+
+    <!-- Filter Dropdown -->
     <select id="filter">
       <option value="all">All</option>
       <option value="read">Read</option>
       <option value="unread">Unread</option>
       <option value="favorites">Favorites</option>
     </select>
+
+    <!-- Sort Dropdown -->
     <select id="sort">
-      <option value="date">Sort by Date Added</option>
       <option value="name">Sort by Name</option>
       <option value="rating">Sort by Rating</option>
+      <option value="date-newest">Newest to Oldest</option>
+      <option value="date-oldest">Oldest to Newest</option>
       <option value="category">Sort by Category</option>
     </select>
   </section>
 
-  <!-- 🚀 Action Buttons -->
+  <!-- Action Buttons -->
   <section id="actions">
     <button id="add-book-btn">Add New Book</button>
     <button id="clear-library-btn">Empty Library</button>
@@ -38,31 +45,32 @@
     <input type="file" id="import" accept="application/json">
   </section>
 
-  <!-- Add Book Count -->
+  <!-- Book Count Display -->
   <section id="book-count">
     <p>Total Books in Library: <span id="book-count-value">0</span></p>
   </section>
 
-  <!-- 📚 Book List -->
+  <!-- Book List Container -->
   <section id="book-list"></section>
 
-  <!-- 📦 Modal for Adding/Editing a Book -->
+  <!-- Modal for Adding/Editing a Book -->
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close" id="close-modal">&times;</span>
       <h2>Add a New Book</h2>
       <form id="book-form">
-        <!-- 📖 Title -->
+        
+        <!-- Title Input -->
         <div class="form-group">
           <input type="text" id="title" placeholder="Title" required>
         </div>
 
-        <!-- 👤 Author -->
+        <!-- Author Input -->
         <div class="form-group">
           <input type="text" id="author" placeholder="Author" required>
         </div>
 
-        <!-- 🏷️ Category -->
+        <!-- Category Dropdown -->
         <div class="form-group">
           <label for="category">Category:</label>
           <select id="category" required>
@@ -82,44 +90,43 @@
           </select>
         </div>
         
+        <!-- Custom Category Input (Hidden until "Other" selected) -->
         <div class="form-group" id="custom-category-group">
           <label for="custom-category">Custom Category:</label>
           <input type="text" id="custom-category" placeholder="Enter custom category">
         </div>
 
-        <!-- ⭐ Rating -->
+        <!-- Rating Dropdown -->
         <div class="form-group">
-          <label>
-            Rating:
-            <select id="rating">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </label>
+          <label for="rating">Rating:</label>
+          <select id="rating">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
 
-        <!-- ✅ Checkboxes -->
+        <!-- Status Checkboxes -->
         <div class="form-group">
           <label><input type="checkbox" id="isRead"> Read</label>
           <label><input type="checkbox" id="isFavorite"> Favorite</label>
         </div>
 
-        <!-- 📥 Submit Button -->
+        <!-- Submit Button -->
         <button type="submit">Add Book</button>
       </form>
     </div>
   </div>
 
-  <!-- 📝 Footer -->
+  <!-- Footer Section -->
   <footer>
     <p>Created by <a href="https://github.com/cltxvz" target="_blank">Carlos A. Cárdenas</a></p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- JavaScript Files -->
   <script src="js/book.js"></script>
   <script src="js/app.js"></script>
 </body>

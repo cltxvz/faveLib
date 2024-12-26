@@ -1,4 +1,4 @@
-// 📌 DOM Elements
+// DOM Elements
 const bookForm = document.getElementById('book-form');
 const bookList = document.getElementById('book-list');
 const searchInput = document.getElementById('search');
@@ -16,15 +16,15 @@ const customCategoryGroup = document.getElementById('custom-category-group');
 const customCategoryInput = document.getElementById('custom-category');
 
 
-// 📚 Library Array
+// Library Array
 let library = [];
 
-// 📌 Generate Unique ID
+// Generate Unique ID
 function generateUniqueId() {
   return `book-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
 }
 
-// 📦 Load Library from LocalStorage
+// Load Library from LocalStorage
 function loadLibrary() {
   const savedLibrary = localStorage.getItem('library');
   if (savedLibrary) {
@@ -45,12 +45,12 @@ function loadLibrary() {
 }
 
 
-// 💾 Save Library to LocalStorage
+// Save Library to LocalStorage
 function saveLibrary() {
   localStorage.setItem('library', JSON.stringify(library));
 }
 
-// 🛠️ Show/Hide Custom Category Input
+// Show/Hide Custom Category Input
 categorySelect.addEventListener('change', () => {
   if (categorySelect.value === 'Other') {
     customCategoryGroup.style.display = 'block';
@@ -62,7 +62,7 @@ categorySelect.addEventListener('change', () => {
   }
 });
 
-// 📝 Handle Category Selection Change
+// Handle Category Selection Change
 categorySelect.addEventListener('change', () => {
   if (categorySelect.value === 'Other') {
     customCategoryGroup.style.display = 'block';
@@ -74,7 +74,7 @@ categorySelect.addEventListener('change', () => {
   }
 });
 
-// 📊 Display Books
+// Display Books
 function displayBooks() {
   bookList.innerHTML = '';
 
@@ -99,7 +99,8 @@ function displayBooks() {
     .sort((a, b) => {
       if (sort === 'name') return a.title.localeCompare(b.title);
       if (sort === 'rating') return (b.rating || 0) - (a.rating || 0);
-      if (sort === 'date') return new Date(b.dateAdded) - new Date(a.dateAdded);
+      if (sort === 'date-newest') return new Date(b.dateAdded) - new Date(a.dateAdded);
+      if (sort === 'date-oldest') return new Date(a.dateAdded) - new Date(b.dateAdded);
       if (sort === 'category') return a.category.localeCompare(b.category);
       return 0;
     })
@@ -120,11 +121,10 @@ function displayBooks() {
       `;
       bookList.appendChild(bookItem);
     });
-
   updateBookCount();
 }
 
-// ⭐ Update Rating
+// Update Rating
 function updateRating(id, newRating) {
   const book = library.find((b) => b.id === id);
   if (book) {
@@ -134,7 +134,7 @@ function updateRating(id, newRating) {
   }
 }
 
-// 🛠️ Edit Book
+// Edit Book
 function editBook(id) {
   const book = library.find((b) => b.id === id);
   if (book) {
@@ -168,7 +168,7 @@ function editBook(id) {
   }
 }
 
-// 📖 Add or Update Book
+// Add or Update Book
 bookForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -211,7 +211,7 @@ bookForm.addEventListener('submit', (e) => {
   modal.style.display = 'none';
 });
 
-// 📦 Modal Logic - Add New Book
+// Modal Logic - Add New Book
 addBookBtn.addEventListener('click', () => {
   bookForm.reset();
   delete bookForm.dataset.editingId;
@@ -227,7 +227,7 @@ addBookBtn.addEventListener('click', () => {
 });
 
 
-// ❌ Modal Logic - Close Modal
+// Modal Logic - Close Modal
 closeModal.addEventListener('click', () => {
   modal.style.display = 'none';
 });
@@ -239,7 +239,7 @@ window.addEventListener('click', (e) => {
   }
 });
 
-// ⚠️ Clear Entire Library
+// Clear Entire Library
 clearLibraryBtn.addEventListener('click', () => {
   if (confirm('Are you sure you want to clear the entire library?')) {
     library = [];
@@ -248,7 +248,7 @@ clearLibraryBtn.addEventListener('click', () => {
   }
 });
 
-// 📤 Export Library
+// Export Library
 exportBtn.addEventListener('click', () => {
   const blob = new Blob([JSON.stringify(library, null, 2)], { type: 'application/json' });
   const a = document.createElement('a');
@@ -257,7 +257,7 @@ exportBtn.addEventListener('click', () => {
   a.click();
 });
 
-// 📥 Import Library
+// Import Library
 importBtn.addEventListener('change', (e) => {
   const file = e.target.files[0];
   if (!file) return;
@@ -303,16 +303,16 @@ importBtn.addEventListener('change', (e) => {
   reader.readAsText(file);
 });
 
-// 📊 Update Book Count
+// Update Book Count
 function updateBookCount() {
   bookCountValue.textContent = library.length;
 }
 
-// 📝 Event Listeners
+// Event Listeners
 searchInput.addEventListener('input', displayBooks);
 filterSelect.addEventListener('change', displayBooks);
 sortSelect.addEventListener('change', displayBooks);
 
-// 🚀 Initialize App
+// Initialize App
 loadLibrary();
 displayBooks();
