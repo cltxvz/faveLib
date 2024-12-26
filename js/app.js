@@ -211,6 +211,22 @@ bookForm.addEventListener('submit', (e) => {
   modal.style.display = 'none';
 });
 
+// Delete a Book
+function deleteBook(id) {
+  const bookIndex = library.findIndex((b) => b.id === id);
+
+  if (bookIndex !== -1) {
+    if (confirm('Are you sure you want to delete this book?')) {
+      library.splice(bookIndex, 1); // Remove book by index
+      saveLibrary();
+      displayBooks();
+    }
+  } else {
+    alert('Book not found. Please refresh the page and try again.');
+  }
+}
+
+
 // Modal Logic - Add New Book
 addBookBtn.addEventListener('click', () => {
   bookForm.reset();
