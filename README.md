@@ -8,7 +8,7 @@ faveLib is an interactive web-based library management system that allows users 
 
 🛠️ Technologies Used:
 
-- Frontend: HTML, CSS, JavaScript.
+- Stack: HTML, CSS, JavaScript.
 - Core Libraries/Tools: LocalStorage API, FileReader API, Blob API.
 - Version Control: Git & GitHub.
 
