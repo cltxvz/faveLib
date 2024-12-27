@@ -62,17 +62,6 @@ categorySelect.addEventListener('change', () => {
   }
 });
 
-// Handle Category Selection Change
-categorySelect.addEventListener('change', () => {
-  if (categorySelect.value === 'Other') {
-    customCategoryGroup.style.display = 'block';
-    customCategoryInput.required = true;
-  } else {
-    customCategoryGroup.style.display = 'none';
-    customCategoryInput.required = false;
-    customCategoryInput.value = '';
-  }
-});
 
 // Display Books
 function displayBooks() {
@@ -124,15 +113,6 @@ function displayBooks() {
   updateBookCount();
 }
 
-// Update Rating
-function updateRating(id, newRating) {
-  const book = library.find((b) => b.id === id);
-  if (book) {
-    book.rating = parseInt(newRating, 10);
-    saveLibrary();
-    displayBooks();
-  }
-}
 
 // Edit Book
 function editBook(id) {
@@ -261,6 +241,9 @@ clearLibraryBtn.addEventListener('click', () => {
     library = [];
     saveLibrary();
     displayBooks();
+
+    // Clear the file input after clearing the library
+    importBtn.value = '';
   }
 });
 
@@ -274,11 +257,16 @@ exportBtn.addEventListener('click', () => {
 });
 
 // Import Library
+importBtn.addEventListener('click', () => {
+  importBtn.value = ''; // Clear the file input selection
+});
+
 importBtn.addEventListener('change', (e) => {
   const file = e.target.files[0];
   if (!file) return;
 
   const reader = new FileReader();
+
   reader.onload = (e) => {
     try {
       const importedData = JSON.parse(e.target.result);
@@ -313,7 +301,14 @@ importBtn.addEventListener('change', (e) => {
     } catch (error) {
       console.error('Error importing library:', error);
       alert('Invalid file format. Please upload a valid JSON file.');
+    } finally {
     }
+  };
+
+  // Clear file input on file read error
+  reader.onerror = () => {
+    alert('Error reading file. Please try again.');
+    importBtn.value = '';
   };
 
   reader.readAsText(file);
