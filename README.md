@@ -15,7 +15,7 @@ faveLib is an interactive web-based library management system that allows users 
 
 📚 Skills & Concepts Applied:
 
-- Object-Oriented Programming (OOP): Classes, Objects, Encapsulation.
+- Object-Oriented Programming (OOP): Classes and Objects.
 - Data Structures: Arrays.
 - Algorithms: Search, Sort.
 - State Management: Dynamic UI updates via JavaScript DOM manipulation, State preservation with LocalStorage API.
