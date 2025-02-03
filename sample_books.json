@@ -1,0 +1,202 @@
+[
+  {
+    "id": "1",
+    "title": "Where the Crawdads Sing",
+    "author": "Delia Owens",
+    "category": "Fiction",
+    "isRead": true,
+    "isFavorite": false,
+    "rating": 5,
+    "dateAdded": "2024-06-01"
+  },
+  {
+    "id": "2",
+    "title": "The Four Winds",
+    "author": "Kristin Hannah",
+    "category": "Historical Fiction",
+    "isRead": false,
+    "isFavorite": true,
+    "rating": 4,
+    "dateAdded": "2024-06-02"
+  },
+  {
+    "id": "3",
+    "title": "It Ends with Us",
+    "author": "Colleen Hoover",
+    "category": "Romance",
+    "isRead": true,
+    "isFavorite": true,
+    "rating": 5,
+    "dateAdded": "2024-06-03"
+  },
+  {
+    "id": "4",
+    "title": "The Midnight Library",
+    "author": "Matt Haig",
+    "category": "Fantasy",
+    "isRead": true,
+    "isFavorite": false,
+    "rating": 4,
+    "dateAdded": "2024-06-04"
+  },
+  {
+    "id": "5",
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "category": "Thriller",
+    "isRead": false,
+    "isFavorite": false,
+    "rating": 3,
+    "dateAdded": "2024-06-05"
+  },
+  {
+    "id": "6",
+    "title": "Project Hail Mary",
+    "author": "Andy Weir",
+    "category": "Science Fiction",
+    "isRead": true,
+    "isFavorite": true,
+    "rating": 5,
+    "dateAdded": "2024-06-06"
+  },
+  {
+    "id": "7",
+    "title": "The Seven Husbands of Evelyn Hugo",
+    "author": "Taylor Jenkins Reid",
+    "category": "Historical Fiction",
+    "isRead": true,
+    "isFavorite": false,
+    "rating": 5,
+    "dateAdded": "2024-06-07"
+  },
+  {
+    "id": "8",
+    "title": "Verity",
+    "author": "Colleen Hoover",
+    "category": "Romantic Suspense",
+    "isRead": true,
+    "isFavorite": true,
+    "rating": 4,
+    "dateAdded": "2024-06-08"
+  },
+  {
+    "id": "9",
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "category": "Self-Help",
+    "isRead": false,
+    "isFavorite": false,
+    "rating": 5,
+    "dateAdded": "2024-06-09"
+  },
+  {
+    "id": "10",
+    "title": "The 48 Laws of Power",
+    "author": "Robert Greene",
+    "category": "Non-Fiction",
+    "isRead": false,
+    "isFavorite": false,
+    "rating": 4,
+    "dateAdded": "2024-06-10"
+  },
+  {
+    "id": "11",
+    "title": "Becoming",
+    "author": "Michelle Obama",
+    "category": "Biography",
+    "isRead": true,
+    "isFavorite": true,
+    "rating": 5,
+    "dateAdded": "2024-06-11"
+  },
+  {
+    "id": "12",
+    "title": "Educated",
+    "author": "Tara Westover",
+    "category": "Memoir",
+    "isRead": false,
+    "isFavorite": false,
+    "rating": 4,
+    "dateAdded": "2024-06-12"
+  },
+  {
+    "id": "13",
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "category": "Science Fiction",
+    "isRead": true,
+    "isFavorite": true,
+    "rating": 5,
+    "dateAdded": "2024-06-13"
+  },
+  {
+    "id": "14",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "category": "Fantasy",
+    "isRead": true,
+    "isFavorite": false,
+    "rating": 5,
+    "dateAdded": "2024-06-14"
+  },
+  {
+    "id": "15",
+    "title": "1984",
+    "author": "George Orwell",
+    "category": "Dystopian",
+    "isRead": true,
+    "isFavorite": false,
+    "rating": 5,
+    "dateAdded": "2024-06-15"
+  },
+  {
+    "id": "16",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "category": "Classic",
+    "isRead": false,
+    "isFavorite": false,
+    "rating": 3,
+    "dateAdded": "2024-06-16"
+  },
+  {
+    "id": "17",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "category": "Classic",
+    "isRead": true,
+    "isFavorite": true,
+    "rating": 5,
+    "dateAdded": "2024-06-17"
+  },
+  {
+    "id": "18",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "category": "Philosophical Fiction",
+    "isRead": true,
+    "isFavorite": false,
+    "rating": 4,
+    "dateAdded": "2024-06-18"
+  },
+  {
+    "id": "19",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "category": "Classic",
+    "isRead": true,
+    "isFavorite": false,
+    "rating": 4,
+    "dateAdded": "2024-06-19"
+  },
+  {
+    "id": "20",
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "category": "Fantasy",
+    "isRead": true,
+    "isFavorite": true,
+    "rating": 5,
+    "dateAdded": "2024-06-20"
+  }
+]
